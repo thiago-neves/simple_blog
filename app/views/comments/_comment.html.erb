@@ -1,0 +1,7 @@
+<div class="bg-gray-200 rounded p-6 flex items-center mb-2">
+  <div class="mr-auto">
+    <p class="text-lg font-bold"><%= comment.name %>:</p>
+    <p><%= comment.comment %></p>
+  </div>
+  <%= button_to "Delete comment", [comment.post, comment], method: :delete, form: { data: { turbo_confirm: 'Are you sure?' } }, class: 'bg-red-500 text-white rounded px-4 py-2' %>
+</div>

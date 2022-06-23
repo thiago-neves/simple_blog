@@ -1,0 +1,14 @@
+<% content_for :page_title, "home".upcase %>
+
+<section>
+  <div class="grid grid-cols-3">
+    <% @posts.each do |post| %>
+      <div class="bg-white rounded drop-shadow text-center">
+        <h3 class="p-32">
+          <%= link_to post.title, post %>
+        </h3>
+      </div>
+      </div>
+    <% end %>
+  </div>
+</section>

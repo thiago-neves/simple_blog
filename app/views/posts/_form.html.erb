@@ -1,0 +1,15 @@
+<div>
+  <%= simple_form_for @post do |f|%>
+    <div>
+      <div>
+        <%= f.input :title, input_html: { class: 'w-full rounded' }, label_html: { class: 'block' } %>
+      </div>
+      <div class="my-4">
+        <%= f.input :content, input_html: { class: 'w-full rounded' }, label_html: { class: 'block' } %>
+      </div>
+    </div>
+    <div class="flex justify-end">
+      <%= f.button :submit, class: 'bg-blue-500 text-white px-4 py-2 rounded' %>
+    </div>
+  <% end %>
+</div>

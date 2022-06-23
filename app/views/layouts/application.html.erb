@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SimpleBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="min-h-screen w-full bg-gray-100">
+    <nav class="bg-blue-500 text-white h-80 flex-col p-8 drop-shadow-md">
+      <div class="flex">
+        <%= link_to "Simple blog", root_path, class: 'uppercase mr-auto text-2xl' %>
+        <%= link_to "Create new post", new_post_path, class: 'text-lg' %>
+      </div>
+      <div class="w-full text-8xl m-auto flex justify-center h-full items-center font-thin">
+        <%= yield :page_title %>
+      </div>
+    </nav>
+    <main class="m-8">
+      <%= yield %>
+    </main>
+  </body>
+</html>
